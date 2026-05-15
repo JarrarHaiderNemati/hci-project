@@ -1,0 +1,113 @@
+const assets = {
+  profile: 'https://www.figma.com/api/mcp/asset/dcb03076-83e3-4925-8df7-10f281477b1e',
+  friedVegetables:
+    'https://www.figma.com/api/mcp/asset/c4d84ce6-3f76-4c91-9111-240dfb60d5a1',
+  chickenSteak:
+    'https://www.figma.com/api/mcp/asset/b58fdf3d-63f6-4016-ae00-b3e33e1cf9b0',
+  burger:
+    'https://www.figma.com/api/mcp/asset/d06a718a-987d-4f04-9a34-d205e6d08280',
+  salad:
+    'https://www.figma.com/api/mcp/asset/9e54d795-0420-48d8-bda4-7a7aca5b225a',
+  tenders:
+    'https://www.figma.com/api/mcp/asset/c1f7b7c2-99e3-4bb6-b750-cd8b97df232c',
+  grainBowl:
+    'https://www.figma.com/api/mcp/asset/9359f4b9-62d8-4f91-97ab-4bf814041a54',
+  avocadoToast:
+    'https://www.figma.com/api/mcp/asset/13b853a3-8419-42f3-bc06-5c55f69daad1',
+}
+
+export const seededMenuItems = [
+  {
+    itemId: 'fried-vegetables',
+    name: 'Fried Vegetables',
+    price: 12.5,
+    description: 'Roasted chickpeas, feta, and fresh herbs',
+    badge: 'Healthy Choice',
+    category: 'Lunch',
+    section: 'special',
+    stock: 8,
+    ingredients: ['Chickpeas', 'Feta', 'Carrots', 'Pomegranate', 'Fresh herbs'],
+    nutrition: { calories: 520, protein: '18g', prep: '12 min' },
+    image: assets.friedVegetables,
+  },
+  {
+    itemId: 'chicken-steak',
+    name: 'Chicken Steak',
+    price: 15,
+    description: 'Wild greens, asparagus, and lemon butter',
+    badge: 'High Protein',
+    category: 'Lunch',
+    section: 'special',
+    stock: 6,
+    ingredients: ['Grilled chicken', 'Asparagus', 'Lemon butter', 'Wild greens'],
+    nutrition: { calories: 610, protein: '42g', prep: '15 min' },
+    image: assets.chickenSteak,
+  },
+  {
+    itemId: 'classic-cheeseburger',
+    name: 'Classic Cheeseburger',
+    price: 9.75,
+    rating: 4.8,
+    calories: 650,
+    category: 'Lunch',
+    section: 'popular',
+    stock: 10,
+    description: 'Beef patty, cheddar, pickles, and house sauce',
+    ingredients: ['Beef patty', 'Cheddar', 'Pickles', 'Brioche bun'],
+    nutrition: { calories: 650, protein: '31g', prep: '10 min' },
+    image: assets.burger,
+  },
+  {
+    itemId: 'avocado-harvest-salad',
+    name: 'Avocado Harvest Salad',
+    price: 11.2,
+    rating: 4.9,
+    calories: 420,
+    category: 'Breakfast',
+    section: 'popular',
+    stock: 7,
+    description: 'Avocado, greens, grains, and citrus dressing',
+    ingredients: ['Avocado', 'Mixed greens', 'Quinoa', 'Citrus dressing'],
+    nutrition: { calories: 420, protein: '14g', prep: '8 min' },
+    image: assets.salad,
+  },
+  {
+    itemId: 'crispy-chicken-tenders',
+    name: 'Crispy Chicken Tenders',
+    price: 8.5,
+    rating: 4.7,
+    calories: 580,
+    category: 'Snacks',
+    section: 'popular',
+    stock: 5,
+    description: 'Crispy chicken with honey mustard dip',
+    ingredients: ['Chicken breast', 'Panko', 'Honey mustard'],
+    nutrition: { calories: 580, protein: '29g', prep: '9 min' },
+    image: assets.tenders,
+  },
+  {
+    itemId: 'harvest-grain-bowl',
+    name: 'Harvest Grain Bowl',
+    price: 12.5,
+    description: 'Quinoa, Kale, Roasted Sweet Potato',
+    category: 'Lunch',
+    stock: 6,
+    ingredients: ['Quinoa', 'Kale', 'Sweet potato', 'Tahini'],
+    nutrition: { calories: 540, protein: '16g', prep: '11 min' },
+    image: assets.grainBowl,
+  },
+  {
+    itemId: 'avocado-sourdough',
+    name: 'Avocado Sourdough',
+    price: 9,
+    description: 'Poached Egg, Chili Flakes, Radish',
+    badge: 'HEALTHY',
+    category: 'Breakfast',
+    stock: 4,
+    ingredients: ['Sourdough', 'Avocado', 'Poached egg', 'Radish'],
+    nutrition: { calories: 430, protein: '15g', prep: '7 min' },
+    image: assets.avocadoToast,
+  },
+]
+
+export { assets }
