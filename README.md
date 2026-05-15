@@ -10,7 +10,7 @@ Fill these values in `.env`:
 MONGO_URI=
 PORT=4000
 ```
-
+ 
 `MONGO_URI` is intentionally an empty placeholder in `.env.example`.
 
 ## Seed Food Items
