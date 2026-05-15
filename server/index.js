@@ -215,7 +215,7 @@ app.post('/api/cart', requireCurrentUser, async (req, res, next) => {
 
     if (currentQuantity + quantity > item.stock) {
       res.status(409).json({
-        message: Only ${Math.max(0, item.stock - currentQuantity)} left in stock,
+        message: `Only ${Math.max(0, item.stock - currentQuantity)} left in stock`,
       })
       return
     }
@@ -243,7 +243,7 @@ app.patch('/api/cart/:itemId', requireCurrentUser, async (req, res, next) => {
     }
 
     if (quantity > item.stock) {
-      res.status(409).json({ message: Only ${item.stock} available in stock })
+      res.status(409).json({ message: `Only ${item.stock} available in stock` })
       return
     }
 
@@ -298,7 +298,7 @@ app.post('/api/orders', requireCurrentUser, async (req, res, next) => {
     const order = await Order.create({
       user: req.user._id,
       orderNumber,
-      code: CAF-${orderNumber},
+      code: `CAF-${orderNumber}`,
       day: 'Today',
       status: 'Ready in 15 mins',
       pickupTime: req.body.pickupTime || cart.pickupTime,
@@ -369,7 +369,7 @@ app.use((error, req, res, _next) => {
 await connectDb()
 
 app.listen(port, () => {
-  console.log(API listening on http://127.0.0.1:${port})
+  console.log(`API listening on http://127.0.0.1:${port}`)
 })
 
 setInterval(() => {}, 60 * 60 * 1000)
